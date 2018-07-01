@@ -100,7 +100,7 @@ def main():
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
         responses = [x for x in tqdm.tqdm(executor.map(requests.get, urls),
-                                          desc='downloading historical coin pages',
+                                          desc='downloading past coin pages',
                                           total=len(urls))]
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
